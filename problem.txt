@@ -1,0 +1,40 @@
+Problem statement 1
+Theme
+Multimodal AI: Audio search
+Problem statement name
+Effective retrieval from audio transcripts
+Overview
+You have audio recordings across conversations, each containing two speakers. How might you achieve
+effective hybrid search (e.g. both keyword + semantic search) across them? What diarization, database,
+embeddings, and indexing strategies might result in “ideal” retrieval quality at scale? Moreover: What
+metrics are important to consider should this system be brought to production, and what might constitute
+an effective evaluation of the system?
+Tech stack
+● Python or Typescript preferred
+● Some RDBS with embedding support such as Postgres and pgvector
+Restrictions
+● A coding agent may be used, but you must explain how you collaborated with (prompted)
+the agent to arrive at your solution.
+Task
+1. Construct an effective golden dataset of 5-6 audio files of 8-10 minutes length. Each should have a
+unique set of two speakers. You may use recordings of interviews, or podcasts.
+2. Decide what you feel an effective hybrid search strategy might be across these audio files. Users
+should be able to search for both specific words uttered, as well as terms semantically similar to
+their query.
+3. Implement a hybrid search solution across them using a locally run solution. Transcripts should be
+generated from each audio file. Searching for a term should return results highlighting the
+containing file, timestamp, and speaker. Embedding generation and indexing should run locally;
+transcription may use a hosted or local solution.
+© HackerEarth, 2026 1
+Building problem statements | Hackathons
+4. Evaluate the success of your solution by creating automated tests that measure the recall@k of
+your solution against a small labeled query set.
+Submission format
+● Details about your solution, including an explanation of your engineering design, your rationale for
+it, definition of success criteria for your solution, level of achievement against your criteria, and any
+limitations of your solution, in a Markdown or PDF file
+● Disclosure of coding agent use: You must disclose the use of coding agents in developing your
+project. Where used, you must explain how you directed the agent to arrive at the outputs it
+generated. This may be achieved by sharing documentation of the architectural requirements you
+supplied to the agent, or by providing summarized traces of your interactions with the agent.
+● GitHub/GitLab for code commit containing your solution, as well as your golden dataset and tests

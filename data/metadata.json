@@ -1,0 +1,71 @@
+{
+  "description": "Golden dataset for audio-rag hybrid search evaluation",
+  "files": [
+    {
+      "filename": "episode_01.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    },
+    {
+      "filename": "episode_02.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    },
+    {
+      "filename": "episode_03.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    },
+    {
+      "filename": "episode_04.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    },
+    {
+      "filename": "episode_05.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    },
+    {
+      "filename": "episode_06.wav",
+      "source_url": "",
+      "topic": "",
+      "duration_s": null,
+      "num_speakers": 2,
+      "speaker_map": {
+        "SPEAKER_00": "Speaker A",
+        "SPEAKER_01": "Speaker B"
+      }
+    }
+  ]
+}

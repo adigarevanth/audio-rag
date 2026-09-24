@@ -1,0 +1,32 @@
+[project]
+name = "audio-rag"
+version = "0.1.0"
+description = "Hybrid search over audio transcripts with speaker diarization"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.0",
+    "pyannote.audio>=3.1",
+    "sentence-transformers>=2.2",
+    "psycopg[binary]>=3.1",
+    "pgvector>=0.2",
+    "numpy>=1.24",
+    "click>=8.0",
+    "python-dotenv>=1.0",
+    "pydub>=0.25",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+audio-rag = "src.cli:cli"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+include = ["src*"]

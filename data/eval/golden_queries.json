@@ -1,0 +1,16 @@
+{
+  "description": "Labeled query-result pairs for evaluating search quality. Fill in after transcription is complete.",
+  "queries": [
+    {
+      "query": "EXAMPLE: replace with a real query after transcribing your audio files",
+      "expected_results": [
+        {
+          "file": "episode_01.wav",
+          "speaker": "Speaker A",
+          "timestamp_range": [0.0, 30.0],
+          "relevant_text": "Replace with the actual text you expect to match"
+        }
+      ]
+    }
+  ]
+}
