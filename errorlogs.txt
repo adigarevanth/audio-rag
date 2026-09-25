@@ -1,1 +1,54 @@
-ERROR: Postprocessing: ffprobe and ffmpeg not found. Please install or provide the path using --ffmpeg-location
+(audio-rag) revanth@TIGER03186:~/projects/audio-rag$ audio-rag index
+18:37:20 [INFO] matplotlib.font_manager: generated new fontManager
+18:37:36 [ERROR] src.index: Failed to index 'episode_01.wav'
+Traceback (most recent call last):
+  File "/home/revanth/projects/audio-rag/src/index.py", line 129, in index_all
+    index_audio_file(audio_path, file_meta, force=force)
+  File "/home/revanth/projects/audio-rag/src/index.py", line 59, in index_audio_file
+    with get_connection() as conn:
+  File "/home/revanth/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/src/db.py", line 23, in get_connection
+    conn = psycopg.connect(DATABASE_URL, row_factory=dict_row)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/psycopg/connection.py", line 126, in connect
+    raise last_ex.with_traceback(None)
+psycopg.OperationalError: connection failed: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+        Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "/home/revanth/projects/audio-rag/.venv/bin/audio-rag", line 10, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/src/cli.py", line 49, in index
+    index_all(force=force)
+  File "/home/revanth/projects/audio-rag/src/index.py", line 134, in index_all
+    with get_connection() as conn:
+  File "/home/revanth/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/src/db.py", line 23, in get_connection
+    conn = psycopg.connect(DATABASE_URL, row_factory=dict_row)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/psycopg/connection.py", line 126, in connect
+    raise last_ex.with_traceback(None)
+psycopg.OperationalError: connection failed: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+        Is the server running on that host and accepting TCP/IP connections?
+(audio-rag) revanth@TIGER03186:~/projects/audio-rag$ docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED       STATUS       PORTS     NAMES
+e7f3d9052cc8   pgvector/pgvector:pg16   "docker-entrypoint.s…"   4 hours ago   Up 4 hours             audio-rag-db
