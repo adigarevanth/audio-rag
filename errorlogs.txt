@@ -1,0 +1,19 @@
+revanth@TIGER03186:~/projects/audio-rag$ source .venv/bin/activate
+(audio-rag) revanth@TIGER03186:~/projects/audio-rag$ uv pip install -e ".[dev]"
+Resolved 132 packages in 1.10s
+  × Failed to build `audio-rag @ file:///home/revanth/projects/audio-rag`
+  ├─▶ The build backend returned an error
+  ╰─▶ Call to `setuptools.backends._legacy:_Backend.build_editable` failed (exit status: 1)
+
+      [stderr]
+      Traceback (most recent call last):
+        File "<string>", line 8, in <module>
+      ModuleNotFoundError: No module named 'setuptools.backends'
+
+      hint: This error likely indicates that `audio-rag@0.1.0` depends on `setuptools.backends`, but
+      doesn't declare it as a build dependency. If `audio-rag` is a first-party package, consider
+      adding `setuptools.backends` to its `build-system.requires`. Otherwise, either add it to your
+      `pyproject.toml` under:
+
+      [tool.uv.extra-build-dependencies]
+      audio-rag = ["setuptools.backends"]
