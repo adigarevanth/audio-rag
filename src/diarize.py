@@ -61,7 +61,16 @@ def diarize_audio(audio_path: Path, num_speakers: int = 2) -> DiarizationResult:
     diarization = pipeline(str(audio_path), num_speakers=num_speakers)
 
     segments: list[SpeakerSegment] = []
-    for turn, _, speaker in diarization.itertracks(yield_label=True):
+
+    # Handle both old (Annotation) and new (DiarizeOutput) pyannote return types.
+    # pyannote >= 4.0 returns a DiarizeOutput dataclass with a .speaker_diarization
+    # attribute holding the Annotation. Older versions return the Annotation directly.
+    if hasattr(diarization, "speaker_diarization"):
+        annotation = diarization.speaker_diarization
+    else:
+        annotation = diarization
+
+    for turn, _, speaker in annotation.itertracks(yield_label=True):
         segments.append(SpeakerSegment(
             speaker=speaker,
             start=round(turn.start, 3),
