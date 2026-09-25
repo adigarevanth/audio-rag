@@ -54,7 +54,7 @@ def diarize_audio(audio_path: Path, num_speakers: int = 2) -> DiarizationResult:
     logger.info("Loading pyannote diarization pipeline...")
     pipeline = Pipeline.from_pretrained(
         "pyannote/speaker-diarization-3.1",
-        use_auth_token=HF_TOKEN,
+        token=HF_TOKEN,
     )
 
     logger.info("Diarizing '%s' (expecting %d speakers)...", audio_path.name, num_speakers)
