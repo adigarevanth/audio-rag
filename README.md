@@ -17,6 +17,7 @@ Audio Files → faster-whisper (transcription) → pyannote (diarization) → al
 - **WSL 2** with Ubuntu 22.04+ (or any Debian-based distro)
 - **Docker Desktop** with WSL 2 backend enabled
 - **Python 3.11+**
+- **uv** (Python package manager)
 - **ffmpeg** (for audio processing)
 - **A free HuggingFace account** (for pyannote model access)
 
@@ -28,7 +29,7 @@ Audio Files → faster-whisper (transcription) → pyannote (diarization) → al
 
 ```bash
 sudo apt update
-sudo apt install -y python3.11 python3.11-venv python3-pip ffmpeg git
+sudo apt install -y python3.11 python3.11-venv ffmpeg git curl
 ```
 
 If `python3.11` is not available in your distro's repos:
@@ -39,27 +40,34 @@ sudo apt update
 sudo apt install -y python3.11 python3.11-venv
 ```
 
-### 2. Clone the repo
+### 2. Install uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Restart your shell or run `source $HOME/.local/bin/env` so the `uv` command is on your PATH.
+
+### 3. Clone the repo
 
 ```bash
 git clone <your-repo-url> audio-rag
 cd audio-rag
 ```
 
-### 3. Create a Python virtual environment
+### 4. Create the virtual environment and install dependencies
 
 ```bash
-python3.11 -m venv .venv
+uv venv --python 3.11
 source .venv/bin/activate
-pip install --upgrade pip
-pip install -e .
+uv pip install -e ".[dev]"
 ```
 
-This installs all dependencies: faster-whisper, pyannote.audio, sentence-transformers, psycopg, pgvector, etc.
+This installs everything: faster-whisper, pyannote.audio, sentence-transformers, psycopg, pgvector, yt-dlp, pytest, etc.
 
 > **Note:** The first install may take a few minutes as it downloads PyTorch and the ML libraries.
 
-### 4. Set up environment variables
+### 5. Set up environment variables
 
 ```bash
 cp .env.example .env
@@ -81,7 +89,7 @@ HF_TOKEN=hf_your_actual_token_here
 3. Go to https://huggingface.co/pyannote/segmentation-3.0 and accept the terms
 4. Create a token at https://huggingface.co/settings/tokens (read access is enough)
 
-### 5. Start Postgres with pgvector
+### 6. Start Postgres with pgvector
 
 Make sure Docker Desktop is running with WSL 2 integration enabled.
 
@@ -111,11 +119,9 @@ docker exec -it audio-rag-db psql -U audio_rag -d audio_rag -c "SELECT 1;"
 
 You need 5-6 audio files, each 8-10 minutes long, each with exactly 2 speakers. Good free sources include podcast episodes and interviews on YouTube.
 
-**Download from YouTube using yt-dlp:**
+**Download from YouTube using yt-dlp** (installed as a project dependency):
 
 ```bash
-pip install yt-dlp
-
 # Download audio only
 yt-dlp -x --audio-format wav -o "data/audio/episode_01.%(ext)s" "https://youtube.com/watch?v=VIDEO_ID"
 ```
@@ -231,13 +237,13 @@ First, fill in `data/eval/golden_queries.json` with labeled queries and expected
 audio-rag evaluate
 
 # Or via pytest
-pytest tests/test_search.py -v
+uv run pytest tests/test_search.py -v
 ```
 
 ### Run unit tests
 
 ```bash
-pytest tests/test_pipeline.py -v
+uv run pytest tests/test_pipeline.py -v
 ```
 
 ---
@@ -270,7 +276,10 @@ Check Docker is running: `docker compose ps`. If the container is not up, run `d
 faster-whisper runs on CPU by default. The `base` model takes roughly 2-3x real-time on a modern CPU (so 10 min audio takes ~20-30 min). Use `WHISPER_MODEL=tiny` in `.env` for faster but less accurate transcription. If you have an NVIDIA GPU accessible in WSL, install the CUDA version of CTranslate2 for significant speedup.
 
 **"No module named src"**
-Make sure you installed the project in editable mode: `pip install -e .` from the repo root with the venv activated.
+Make sure you installed the project in editable mode: `uv pip install -e .` from the repo root with the venv activated.
+
+**uv can't find Python 3.11**
+Install it through uv itself: `uv python install 3.11`, then re-run `uv venv --python 3.11`.
 
 **Docker volume issues**
 If the database seems empty after restarting Docker, check that the volume persists: `docker volume ls` should show an `audio-rag_pgdata` volume. If you need to start fresh: `docker compose down -v && docker compose up -d`.
@@ -284,7 +293,7 @@ audio-rag/
 ├── .env.example              # Environment variables template
 ├── .gitignore
 ├── docker-compose.yml        # Postgres + pgvector
-├── pyproject.toml            # Python dependencies
+├── pyproject.toml            # Python dependencies (uv)
 ├── scripts/
 │   └── init_db.sql           # Database schema
 ├── data/
