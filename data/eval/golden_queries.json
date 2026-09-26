@@ -1,5 +1,5 @@
 {
-  "description": "Labeled query-result pairs for evaluating hybrid search quality across 4 audio files. Covers keyword-heavy, semantic-heavy, and mixed queries.",
+  "description": "Labeled query-result pairs for evaluating hybrid search quality across 5 audio files. Covers keyword-heavy, semantic-heavy, and mixed queries.",
   "queries": [
     {
       "query": "Roman Republic founded after kings overthrown",
@@ -226,6 +226,84 @@
           "relevant_text": "IT entry level salaries 4-5 lakhs have not increased inflation adjusted in 20 years while CEO salaries at companies like HCL have gone to hundreds of crores"
         }
       ]
+    },
+    {
+      "query": "universities too slow to adapt curriculum for AI",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [31.0, 143.0],
+          "relevant_text": "Many universities are still teaching students to be ready for the jobs of 2022 we should be teaching them for the jobs of 2028 and beyond"
+        }
+      ]
+    },
+    {
+      "query": "how to learn AI skills online courses",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [31.0, 143.0],
+          "relevant_text": "supplement via Coursera deep learning AI Udemy"
+        }
+      ]
+    },
+    {
+      "query": "AI native interns college students productive",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [31.0, 143.0],
+          "relevant_text": "interns college students a high school intern are productive because they are AI native"
+        }
+      ]
+    },
+    {
+      "query": "humans have context advantage over AI",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [422.0, 522.0],
+          "relevant_text": "Humans have a massive context advantage over AI years of experience reading customer facial expressions understanding managers priorities"
+        }
+      ]
+    },
+    {
+      "query": "AI models terrible for learning student retention",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [523.0, 600.0],
+          "relevant_text": "AI models are terrible for learning students score higher on homework with AI but long-term retention and performance are much worse"
+        }
+      ]
+    },
+    {
+      "query": "measuring AI productivity KPIs business outcomes",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [290.0, 339.0],
+          "relevant_text": "The business outcome of AI is more function of the business KPI examples customer growth retention speed of service accuracy"
+        }
+      ]
+    },
+    {
+      "query": "prompt engineering chain of thought few-shot examples",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [144.0, 239.0],
+          "relevant_text": "few-shot examples chain of thought reasoning AI personas modular prompt components prompt engineering system"
+        }
+      ]
     }
   ]
 }
+
