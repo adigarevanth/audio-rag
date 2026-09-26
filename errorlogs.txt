@@ -1,19 +1,23 @@
-pytorch_model.bin: downloading bytes: █████████████████████████████████████████████████| 25.2MB, 2.19MB/s
-pytorch_model.bin: reconstructing file: 100%|█████████████████████████████████| 26.6MB / 26.6MB, 2.45MB/s
-18:51:52 [INFO] src.diarize: Diarizing 'episode_01.wav' (expecting 2 speakers)...
-/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/pyannote/audio/models/blocks/pooling.py:103: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/ReduceOps.cpp:1913.)
-  std = sequences.std(dim=-1, correction=1)
-19:05:57 [ERROR] src.index: Failed to index 'episode_01.wav'
+(audio-rag) revanth@TIGER03186:~/projects/audio-rag$ audio-rag evaluate
 Traceback (most recent call last):
-  File "/home/revanth/projects/audio-rag/src/index.py", line 129, in index_all
-    index_audio_file(audio_path, file_meta, force=force)
-  File "/home/revanth/projects/audio-rag/src/index.py", line 79, in index_audio_file
-    diarization = diarize_audio(audio_path, num_speakers=num_speakers)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/revanth/projects/audio-rag/src/diarize.py", line 64, in diarize_audio
-    for turn, _, speaker in diarization.itertracks(yield_label=True):
-                            ^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'DiarizeOutput' object has no attribute 'itertracks'
-19:05:57 [WARNING] src.db: No chunks in database; skipping index creation.
-19:05:57 [INFO] src.index: Indexing complete.
-Indexing complete.
+  File "/home/revanth/projects/audio-rag/.venv/bin/audio-rag", line 10, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/.venv/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/revanth/projects/audio-rag/src/cli.py", line 92, in evaluate
+    from tests.test_search import run_evaluation
+ModuleNotFoundError: No module named 'tests'
