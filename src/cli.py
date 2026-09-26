@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import sys
+from pathlib import Path
 
 import click
 
@@ -89,6 +90,8 @@ def search(query: str, top_k: int, mode: str) -> None:
 @cli.command()
 def evaluate() -> None:
     """Run recall@k evaluation against the golden query set."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     from tests.test_search import run_evaluation
     run_evaluation()
 

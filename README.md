@@ -32,12 +32,22 @@ sudo apt update
 sudo apt install -y python3.11 python3.11-venv ffmpeg git curl
 ```
 
+> **Important:** `ffmpeg` is required by both yt-dlp (audio download/conversion) and pydub (audio processing). Without it, downloads and audio operations will fail.
+
 If `python3.11` is not available in your distro's repos:
 
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install -y python3.11 python3.11-venv
+```
+
+Verify everything is installed:
+
+```bash
+python3.11 --version
+ffmpeg -version
+docker --version
 ```
 
 ### 2. Install uv
@@ -265,6 +275,9 @@ uv run pytest tests/test_pipeline.py -v
 ---
 
 ## Troubleshooting
+
+**"ffprobe and ffmpeg not found" when running yt-dlp**
+Install ffmpeg: `sudo apt install -y ffmpeg`. It is required for yt-dlp to convert downloaded audio to WAV.
 
 **"HF_TOKEN is not set"**
 Make sure you copied `.env.example` to `.env` and added your HuggingFace token. Also ensure you accepted the pyannote model terms on HuggingFace.

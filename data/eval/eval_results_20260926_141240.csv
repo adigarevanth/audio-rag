@@ -1,0 +1,133 @@
+PER-QUERY RESULTS
+
+HYBRID SEARCH
+Query,Category,Recall@5,Recall@10,Precision@5,Precision@10,MRR,Top Result File,Top Result Speaker,Top Result Timestamp,Match Type,Top Result Text
+Roman Republic founded after kings overthrown,keyword,1.000,1.000,0.200,0.300,1.000,lex-fridman-498.wav,Speaker A,01:38 - 04:26,both,"It's a very important reformer. And we'll talk about it, but let's just do this whirlwind and hopefully there'll be automagical images somewhere overl"
+Augustus Caesar imperial monarchy,keyword,1.000,1.000,0.200,0.100,1.000,lex-fridman-498.wav,Speaker B,00:00 - 00:41,both,"and Augustus Caesar, when the civil wars lead to the creation of an imperial monarchy, under Augustus. So we date that roughly at 27 BC, something lik"
+what caused the fall of Constantinople,semantic,1.000,1.000,0.400,0.300,1.000,lex-fridman-498.wav,Speaker A,04:26 - 05:14,semantic,"And then we sort of focus more on the East Roman Empire with 527 in the 6th century, Justinian's reign. In the 7th century, Heracus defeats Persia and"
+Ship of Theseus metaphor for Roman identity,semantic,1.000,1.000,0.400,0.200,1.000,lex-fridman-498.wav,Speaker B,09:05 - 09:59,semantic,"I think so, yes. By the way, you know the metaphor, the ship of Thesius. In case the audience doesn't know it, this is when there's a ship and it's at"
+how did Rome lose territory over the centuries,semantic,1.000,1.000,0.600,0.300,1.000,lex-fridman-498.wav,Speaker A,01:38 - 04:26,semantic,"It's a very important reformer. And we'll talk about it, but let's just do this whirlwind and hopefully there'll be automagical images somewhere overl"
+Diocletian Constantine reforms late Roman empire,keyword,1.000,1.000,0.800,0.600,1.000,lex-fridman-498.wav,Speaker B,01:03 - 01:32,both,"So they Roman empire we use for both east and west, starting around the reign of Diocletian maybe even a bit earlier. So during the third century AD, "
+AI whistleblower suspicious death,semantic,1.000,1.000,0.400,0.600,1.000,joe-rogan-2404.wav,Speaker B,00:32 - 00:44,semantic,no yeah it seems pretty fucked up and you know the idea that a whistleblower for an enormous AI company that's worth billions of dollars might get wha
+Sam Altman accused of murder,keyword,1.000,1.000,1.000,0.700,1.000,joe-rogan-2404.wav,Speaker B,01:03 - 01:07,both,is it's Sam Altman's reaction to being accused of murder is bizarre
+Epstein did not kill himself guards cameras,hybrid,1.000,1.000,0.400,0.300,1.000,joe-rogan-2404.wav,Speaker A,03:11 - 03:15,semantic,yeah it should have asked if Epstein killed himself
+interstellar object made of nickel,keyword,1.000,1.000,0.200,0.300,0.200,joe-rogan-2404.wav,Speaker A,07:03 - 07:21,semantic,most didn't know there are there are there definitely comments that and asteroids that are made primarily a pickle yeah so the the places where um you
+are we living in a computer simulation,semantic,1.000,1.000,0.600,0.300,1.000,joe-rogan-2404.wav,Speaker B,05:09 - 05:17,semantic,every day and every day it's like more and more ridiculous to the point where the simulation is more and more undeniable yeah
+asteroid impact extinction event,hybrid,1.000,1.000,0.200,0.100,1.000,joe-rogan-2404.wav,Speaker A,08:32 - 09:39,both,um if not all of us I don't know it depends on what the total mass is but um there's I mean the things like in the fossil record there are um you know
+what would happen if a giant space rock hit Earth,semantic,0.500,0.500,0.200,0.100,0.500,joe-rogan-2404.wav,Speaker A,08:04 - 08:18,semantic,they're okay there are cases where there's like very nickel rich uh asteroids meteorite that that that that happened for something from space yeah it'
+Bill Gates climate change not a big deal,keyword,1.000,1.000,0.200,0.200,1.000,joe-rogan-2404.wav,Speaker B,04:22 - 04:53,both,seems highly highly highly like all words point to murder yes point to they had to get rid of him because he knew too much whatever the fuck he was do
+how to read non-verbal signals from people,semantic,1.000,1.000,0.200,0.100,1.000,raj-shamani-F0565.wav,Speaker B,00:53 - 02:13,semantic,"Well, if you're talking about individual people, it's, you can't do it like in one go, you have to, it takes a little bit of time. We think so much in"
+silencing inner chatter for success,hybrid,1.000,1.000,0.400,0.200,1.000,raj-shamani-F0565.wav,Speaker A,02:13 - 02:21,semantic,"To shut down inner chatter, is there a practice or a trick that somebody could practice in their life on daily basis to learn that?"
+how to be more attractive and charismatic,semantic,1.000,1.000,0.400,0.200,0.333,raj-shamani-F0565.wav,Speaker A,03:40 - 03:45,semantic,"Tell me, what is the most seductive quality somebody can possess?"
+lack of defensiveness is seductive,keyword,1.000,1.000,0.400,0.200,1.000,raj-shamani-F0565.wav,Speaker B,03:46 - 06:18,both,"Well, I'll tell you, I lived in Paris many years ago. Well, before you were born, I was like 21 years old. I was working in a hotel. I was a reception"
+Errol Flynn seduction charm,keyword,1.000,1.000,0.400,0.200,0.500,raj-shamani-F0565.wav,Speaker A,03:40 - 03:45,semantic,"Tell me, what is the most seductive quality somebody can possess?"
+mixed signals to make people think about you,hybrid,1.000,1.000,0.200,0.100,1.000,raj-shamani-F0565.wav,Speaker B,07:14 - 09:14,both,"Well, I go around this question from a different angle. So seduction is a game where you're trying to make the other person think about you when you'r"
+practicing empathy with strangers daily exercise,semantic,1.000,1.000,0.400,0.200,1.000,raj-shamani-F0565.wav,Speaker A,02:13 - 02:21,semantic,"To shut down inner chatter, is there a practice or a trick that somebody could practice in their life on daily basis to learn that?"
+should I go into consulting or industry,semantic,1.000,1.000,0.400,0.200,1.000,finance-with-sharan-career-choices.wav,Speaker B,02:53 - 03:40,both,matter which industry It I would at the reason I'm not saying this because the opportunities are very limited So I would say it doesn't matter where y
+how to overcome low self-esteem at work,semantic,1.000,1.000,0.200,0.100,0.500,raj-shamani-F0565.wav,Speaker B,00:00 - 00:40,semantic,"yourself and all of your worries and concerns, projecting a feeling of strength and confidence, and focusing on their spirit and getting inside of tha"
+Employee First Customer Second HCL revenue growth,hybrid,1.000,1.000,0.200,0.100,1.000,finance-with-sharan-career-choices.wav,Speaker B,06:59 - 08:29,semantic,so the reason I'm saying is We do not understand called human technology We do not understand how the human works And the same when human decides to d
+condolence cards sales strategy market share,keyword,0.000,0.000,0.000,0.000,0.000,finance-with-sharan-career-choices.wav,Speaker A,06:56 - 06:59,semantic,But he's still didn't understand how this condolence cards right
+IT salary disparity CEO compensation,semantic,1.000,1.000,0.200,0.200,1.000,finance-with-sharan-career-choices.wav,Speaker A,08:56 - 09:40,semantic,So I have a controversial question here So the IT industry is known for paying very low entry level salaries You see that all over the media and it ha
+what career advice would you give to someone starting out in 2026,semantic,0.500,1.000,0.200,0.200,0.500,finance-with-sharan-career-choices.wav,Speaker A,00:00 - 00:17,semantic,Most of the smart people choosing careers which pay the highest amount of money today which is you know finance and consulting But if you were to star
+universities too slow to adapt curriculum for AI,hybrid,1.000,1.000,0.400,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,both,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+how to learn AI skills online courses,semantic,1.000,1.000,0.400,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,both,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+AI native interns college students productive,keyword,1.000,1.000,0.400,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,both,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+humans have context advantage over AI,hybrid,1.000,1.000,0.200,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,both,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+will AI replace all jobs and cause unemployment,semantic,0.500,1.000,0.200,0.300,1.000,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,semantic,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+AI models terrible for learning student retention,keyword,1.000,1.000,0.200,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,09:04 - 09:59,both,"I'm gonna say something that may be controversial. I don't have said this publicly, but I think it's true, which is frankly, AI models are terrible fo"
+measuring AI productivity KPIs business outcomes,hybrid,1.000,1.000,0.800,0.400,1.000,andrew_ng_ai_opportunities.wav,Speaker A,04:58 - 05:18,semantic,"I wish a simple answer. I find that the business outcome of AI is more function of the business and the function of the AI. For some, it may be increa"
+prompt engineering chain of thought few-shot examples,keyword,1.000,1.000,0.200,0.100,0.500,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,semantic,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+
+KEYWORD ONLY SEARCH
+Query,Category,Recall@5,Recall@10,Precision@5,Precision@10,MRR,Top Result File,Top Result Speaker,Top Result Timestamp,Match Type,Top Result Text
+Roman Republic founded after kings overthrown,keyword,1.000,1.000,1.000,1.000,1.000,lex-fridman-498.wav,Speaker A,01:38 - 04:26,keyword,"It's a very important reformer. And we'll talk about it, but let's just do this whirlwind and hopefully there'll be automagical images somewhere overl"
+Augustus Caesar imperial monarchy,keyword,1.000,1.000,1.000,1.000,1.000,lex-fridman-498.wav,Speaker B,00:00 - 00:41,keyword,"and Augustus Caesar, when the civil wars lead to the creation of an imperial monarchy, under Augustus. So we date that roughly at 27 BC, something lik"
+what caused the fall of Constantinople,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+Ship of Theseus metaphor for Roman identity,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+how did Rome lose territory over the centuries,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+Diocletian Constantine reforms late Roman empire,keyword,0.500,0.500,1.000,1.000,1.000,lex-fridman-498.wav,Speaker B,01:03 - 01:32,keyword,"So they Roman empire we use for both east and west, starting around the reign of Diocletian maybe even a bit earlier. So during the third century AD, "
+AI whistleblower suspicious death,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+Sam Altman accused of murder,keyword,1.000,1.000,1.000,1.000,1.000,joe-rogan-2404.wav,Speaker B,01:03 - 01:07,keyword,is it's Sam Altman's reaction to being accused of murder is bizarre
+Epstein did not kill himself guards cameras,hybrid,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+interstellar object made of nickel,keyword,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+are we living in a computer simulation,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+asteroid impact extinction event,hybrid,1.000,1.000,1.000,1.000,1.000,joe-rogan-2404.wav,Speaker A,08:32 - 09:39,keyword,um if not all of us I don't know it depends on what the total mass is but um there's I mean the things like in the fossil record there are um you know
+what would happen if a giant space rock hit Earth,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+Bill Gates climate change not a big deal,keyword,1.000,1.000,1.000,1.000,1.000,joe-rogan-2404.wav,Speaker B,04:22 - 04:53,keyword,seems highly highly highly like all words point to murder yes point to they had to get rid of him because he knew too much whatever the fuck he was do
+how to read non-verbal signals from people,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+silencing inner chatter for success,hybrid,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+how to be more attractive and charismatic,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+lack of defensiveness is seductive,keyword,1.000,1.000,1.000,1.000,1.000,raj-shamani-F0565.wav,Speaker B,03:46 - 06:18,keyword,"Well, I'll tell you, I lived in Paris many years ago. Well, before you were born, I was like 21 years old. I was working in a hotel. I was a reception"
+Errol Flynn seduction charm,keyword,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+mixed signals to make people think about you,hybrid,1.000,1.000,1.000,1.000,1.000,raj-shamani-F0565.wav,Speaker B,07:14 - 09:14,keyword,"Well, I go around this question from a different angle. So seduction is a game where you're trying to make the other person think about you when you'r"
+practicing empathy with strangers daily exercise,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+should I go into consulting or industry,semantic,1.000,1.000,1.000,1.000,1.000,finance-with-sharan-career-choices.wav,Speaker B,00:54 - 02:51,keyword,I would say on two trajectories number one Learn the skills which I'm talking about curiosity experimentation application of mind and I give a simple 
+how to overcome low self-esteem at work,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+Employee First Customer Second HCL revenue growth,hybrid,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+condolence cards sales strategy market share,keyword,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+IT salary disparity CEO compensation,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+what career advice would you give to someone starting out in 2026,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+universities too slow to adapt curriculum for AI,hybrid,1.000,1.000,1.000,1.000,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,keyword,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+how to learn AI skills online courses,semantic,1.000,1.000,1.000,1.000,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,keyword,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+AI native interns college students productive,keyword,1.000,1.000,1.000,1.000,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,keyword,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+humans have context advantage over AI,hybrid,1.000,1.000,1.000,1.000,1.000,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,keyword,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+will AI replace all jobs and cause unemployment,semantic,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+AI models terrible for learning student retention,keyword,1.000,1.000,1.000,1.000,1.000,andrew_ng_ai_opportunities.wav,Speaker A,09:04 - 09:59,keyword,"I'm gonna say something that may be controversial. I don't have said this publicly, but I think it's true, which is frankly, AI models are terrible fo"
+measuring AI productivity KPIs business outcomes,hybrid,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+prompt engineering chain of thought few-shot examples,keyword,0.000,0.000,0.000,0.000,0.000,,,,,NO RESULTS
+
+SEMANTIC ONLY SEARCH
+Query,Category,Recall@5,Recall@10,Precision@5,Precision@10,MRR,Top Result File,Top Result Speaker,Top Result Timestamp,Match Type,Top Result Text
+Roman Republic founded after kings overthrown,keyword,1.000,1.000,0.200,0.300,0.500,lex-fridman-498.wav,Speaker B,00:00 - 00:41,semantic,"and Augustus Caesar, when the civil wars lead to the creation of an imperial monarchy, under Augustus. So we date that roughly at 27 BC, something lik"
+Augustus Caesar imperial monarchy,keyword,1.000,1.000,0.200,0.100,1.000,lex-fridman-498.wav,Speaker B,00:00 - 00:41,semantic,"and Augustus Caesar, when the civil wars lead to the creation of an imperial monarchy, under Augustus. So we date that roughly at 27 BC, something lik"
+what caused the fall of Constantinople,semantic,1.000,1.000,0.400,0.300,1.000,lex-fridman-498.wav,Speaker A,04:26 - 05:14,semantic,"And then we sort of focus more on the East Roman Empire with 527 in the 6th century, Justinian's reign. In the 7th century, Heracus defeats Persia and"
+Ship of Theseus metaphor for Roman identity,semantic,1.000,1.000,0.400,0.200,1.000,lex-fridman-498.wav,Speaker B,09:05 - 09:59,semantic,"I think so, yes. By the way, you know the metaphor, the ship of Thesius. In case the audience doesn't know it, this is when there's a ship and it's at"
+how did Rome lose territory over the centuries,semantic,1.000,1.000,0.600,0.300,1.000,lex-fridman-498.wav,Speaker A,01:38 - 04:26,semantic,"It's a very important reformer. And we'll talk about it, but let's just do this whirlwind and hopefully there'll be automagical images somewhere overl"
+Diocletian Constantine reforms late Roman empire,keyword,1.000,1.000,0.800,0.600,1.000,lex-fridman-498.wav,Speaker B,01:03 - 01:32,semantic,"So they Roman empire we use for both east and west, starting around the reign of Diocletian maybe even a bit earlier. So during the third century AD, "
+AI whistleblower suspicious death,semantic,1.000,1.000,0.400,0.600,1.000,joe-rogan-2404.wav,Speaker B,00:32 - 00:44,semantic,no yeah it seems pretty fucked up and you know the idea that a whistleblower for an enormous AI company that's worth billions of dollars might get wha
+Sam Altman accused of murder,keyword,1.000,1.000,1.000,0.700,1.000,joe-rogan-2404.wav,Speaker B,01:03 - 01:07,semantic,is it's Sam Altman's reaction to being accused of murder is bizarre
+Epstein did not kill himself guards cameras,hybrid,1.000,1.000,0.400,0.300,1.000,joe-rogan-2404.wav,Speaker A,03:11 - 03:15,semantic,yeah it should have asked if Epstein killed himself
+interstellar object made of nickel,keyword,1.000,1.000,0.200,0.300,0.200,joe-rogan-2404.wav,Speaker A,07:03 - 07:21,semantic,most didn't know there are there are there definitely comments that and asteroids that are made primarily a pickle yeah so the the places where um you
+are we living in a computer simulation,semantic,1.000,1.000,0.600,0.300,1.000,joe-rogan-2404.wav,Speaker B,05:09 - 05:17,semantic,every day and every day it's like more and more ridiculous to the point where the simulation is more and more undeniable yeah
+asteroid impact extinction event,hybrid,1.000,1.000,0.200,0.100,1.000,joe-rogan-2404.wav,Speaker A,08:32 - 09:39,semantic,um if not all of us I don't know it depends on what the total mass is but um there's I mean the things like in the fossil record there are um you know
+what would happen if a giant space rock hit Earth,semantic,0.500,0.500,0.200,0.100,0.500,joe-rogan-2404.wav,Speaker A,08:04 - 08:18,semantic,they're okay there are cases where there's like very nickel rich uh asteroids meteorite that that that that happened for something from space yeah it'
+Bill Gates climate change not a big deal,keyword,1.000,1.000,0.200,0.200,1.000,joe-rogan-2404.wav,Speaker B,04:22 - 04:53,semantic,seems highly highly highly like all words point to murder yes point to they had to get rid of him because he knew too much whatever the fuck he was do
+how to read non-verbal signals from people,semantic,1.000,1.000,0.200,0.100,1.000,raj-shamani-F0565.wav,Speaker B,00:53 - 02:13,semantic,"Well, if you're talking about individual people, it's, you can't do it like in one go, you have to, it takes a little bit of time. We think so much in"
+silencing inner chatter for success,hybrid,1.000,1.000,0.400,0.200,1.000,raj-shamani-F0565.wav,Speaker A,02:13 - 02:21,semantic,"To shut down inner chatter, is there a practice or a trick that somebody could practice in their life on daily basis to learn that?"
+how to be more attractive and charismatic,semantic,1.000,1.000,0.400,0.200,0.333,raj-shamani-F0565.wav,Speaker A,03:40 - 03:45,semantic,"Tell me, what is the most seductive quality somebody can possess?"
+lack of defensiveness is seductive,keyword,1.000,1.000,0.200,0.200,0.500,raj-shamani-F0565.wav,Speaker A,03:40 - 03:45,semantic,"Tell me, what is the most seductive quality somebody can possess?"
+Errol Flynn seduction charm,keyword,1.000,1.000,0.400,0.200,0.500,raj-shamani-F0565.wav,Speaker A,03:40 - 03:45,semantic,"Tell me, what is the most seductive quality somebody can possess?"
+mixed signals to make people think about you,hybrid,1.000,1.000,0.200,0.100,0.250,raj-shamani-F0565.wav,Speaker A,09:15 - 09:22,semantic,Give me one more example. I love this. How to make people think about you when you're not in the room?
+practicing empathy with strangers daily exercise,semantic,1.000,1.000,0.400,0.200,1.000,raj-shamani-F0565.wav,Speaker A,02:13 - 02:21,semantic,"To shut down inner chatter, is there a practice or a trick that somebody could practice in their life on daily basis to learn that?"
+should I go into consulting or industry,semantic,1.000,1.000,0.200,0.200,0.500,finance-with-sharan-career-choices.wav,Speaker A,00:00 - 00:17,semantic,Most of the smart people choosing careers which pay the highest amount of money today which is you know finance and consulting But if you were to star
+how to overcome low self-esteem at work,semantic,1.000,1.000,0.200,0.100,0.500,raj-shamani-F0565.wav,Speaker B,00:00 - 00:40,semantic,"yourself and all of your worries and concerns, projecting a feeling of strength and confidence, and focusing on their spirit and getting inside of tha"
+Employee First Customer Second HCL revenue growth,hybrid,1.000,1.000,0.200,0.100,1.000,finance-with-sharan-career-choices.wav,Speaker B,06:59 - 08:29,semantic,so the reason I'm saying is We do not understand called human technology We do not understand how the human works And the same when human decides to d
+condolence cards sales strategy market share,keyword,0.000,0.000,0.000,0.000,0.000,finance-with-sharan-career-choices.wav,Speaker A,06:56 - 06:59,semantic,But he's still didn't understand how this condolence cards right
+IT salary disparity CEO compensation,semantic,1.000,1.000,0.200,0.200,1.000,finance-with-sharan-career-choices.wav,Speaker A,08:56 - 09:40,semantic,So I have a controversial question here So the IT industry is known for paying very low entry level salaries You see that all over the media and it ha
+what career advice would you give to someone starting out in 2026,semantic,0.500,1.000,0.200,0.200,0.500,finance-with-sharan-career-choices.wav,Speaker A,00:00 - 00:17,semantic,Most of the smart people choosing careers which pay the highest amount of money today which is you know finance and consulting But if you were to star
+universities too slow to adapt curriculum for AI,hybrid,1.000,1.000,0.400,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,semantic,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+how to learn AI skills online courses,semantic,1.000,1.000,0.200,0.200,0.250,andrew_ng_ai_opportunities.wav,Speaker A,09:04 - 09:59,semantic,"I'm gonna say something that may be controversial. I don't have said this publicly, but I think it's true, which is frankly, AI models are terrible fo"
+AI native interns college students productive,keyword,1.000,1.000,0.400,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,00:31 - 02:23,semantic,So one very challenge for fresh college graduates is that the university system is slow to adapt. And so I love academia. I think we should all suppor
+humans have context advantage over AI,hybrid,1.000,1.000,0.200,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,semantic,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+will AI replace all jobs and cause unemployment,semantic,0.500,1.000,0.200,0.300,1.000,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,semantic,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+AI models terrible for learning student retention,keyword,1.000,1.000,0.200,0.200,1.000,andrew_ng_ai_opportunities.wav,Speaker A,09:04 - 09:59,semantic,"I'm gonna say something that may be controversial. I don't have said this publicly, but I think it's true, which is frankly, AI models are terrible fo"
+measuring AI productivity KPIs business outcomes,hybrid,1.000,1.000,0.800,0.400,1.000,andrew_ng_ai_opportunities.wav,Speaker A,04:58 - 05:18,semantic,"I wish a simple answer. I find that the business outcome of AI is more function of the business and the function of the AI. For some, it may be increa"
+prompt engineering chain of thought few-shot examples,keyword,1.000,1.000,0.200,0.100,0.500,andrew_ng_ai_opportunities.wav,Speaker A,07:02 - 08:42,semantic,"There's one thing I see a lot in AI, which is it turns out for AI status scientists or AI is brainstorming upon there. It often comes up with one or t"
+
+AGGREGATE METRICS (ALL QUERIES)
+Strategy,Recall@5,Recall@10,Precision@5,Precision@10,MRR
+Hybrid,0.929,0.957,0.349,0.234,0.858
+Keyword Only,0.386,0.386,0.400,0.400,0.400
+Semantic Only,0.929,0.957,0.331,0.234,0.772
+
+METRICS BY QUERY CATEGORY
+Strategy,Category,Count,Recall@5,Recall@10,Precision@5,Precision@10,MRR
+Hybrid,hybrid,8,1.000,1.000,0.350,0.200,1.000
+Hybrid,keyword,12,0.917,0.917,0.350,0.258,0.767
+Hybrid,semantic,15,0.900,0.967,0.347,0.233,0.856
+Keyword Only,hybrid,8,0.500,0.500,0.500,0.500,0.500
+Keyword Only,keyword,12,0.625,0.625,0.667,0.667,0.667
+Keyword Only,semantic,15,0.133,0.133,0.133,0.133,0.133
+Semantic Only,hybrid,8,1.000,1.000,0.350,0.200,0.906
+Semantic Only,keyword,12,0.917,0.917,0.333,0.258,0.683
+Semantic Only,semantic,15,0.900,0.967,0.320,0.233,0.772

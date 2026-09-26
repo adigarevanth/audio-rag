@@ -2,10 +2,10 @@
   "description": "Golden dataset for audio-rag hybrid search evaluation",
   "files": [
     {
-      "filename": "episode_01.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
+      "filename": "andrew_ng_ai_opportunities.wav",
+      "source_url": "https://www.youtube.com/watch?v=o-wv_szZ0V0",
+      "topic": "Andrew Ng: The Biggest Opportunities in AI Aren't Where You Think",
+      "duration_s": 600,
       "num_speakers": 2,
       "speaker_map": {
         "SPEAKER_00": "Speaker A",
@@ -13,10 +13,10 @@
       }
     },
     {
-      "filename": "episode_02.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
+      "filename": "lex-fridman-498.wav",
+      "source_url": "https://www.youtube.com/watch?v=pv1TUJSEM2k",
+      "topic": "Lex Fridman: The Rise and Fall of the Roman Empire",
+      "duration_s": 600,
       "num_speakers": 2,
       "speaker_map": {
         "SPEAKER_00": "Speaker A",
@@ -24,10 +24,10 @@
       }
     },
     {
-      "filename": "episode_03.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
+      "filename": "joe-rogan-2404.wav",
+      "source_url": "https://www.youtube.com/watch?v=O4wBUysNe2k",
+      "topic": "Joe Rogan - Elon Musk",
+      "duration_s": 600,
       "num_speakers": 2,
       "speaker_map": {
         "SPEAKER_00": "Speaker A",
@@ -35,10 +35,10 @@
       }
     },
     {
-      "filename": "episode_04.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
+      "filename": "raj-shamani-F0565.wav",
+      "source_url": "https://www.youtube.com/watch?v=p4qPp_3_f2Y",
+      "topic": "Raj Shamani - How to master Seduction",
+      "duration_s": 600,
       "num_speakers": 2,
       "speaker_map": {
         "SPEAKER_00": "Speaker A",
@@ -46,21 +46,10 @@
       }
     },
     {
-      "filename": "episode_05.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
-      "num_speakers": 2,
-      "speaker_map": {
-        "SPEAKER_00": "Speaker A",
-        "SPEAKER_01": "Speaker B"
-      }
-    },
-    {
-      "filename": "episode_06.wav",
-      "source_url": "",
-      "topic": "",
-      "duration_s": null,
+      "filename": "finance-with-sharan-career-choices.wav",
+      "source_url": "https://www.youtube.com/watch?v=jKaTeI9IoTo",
+      "topic": "Finance with Sharan: Career Choices",
+      "duration_s": 600,
       "num_speakers": 2,
       "speaker_map": {
         "SPEAKER_00": "Speaker A",
