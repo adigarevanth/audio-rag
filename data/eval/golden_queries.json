@@ -1,14 +1,229 @@
 {
-  "description": "Labeled query-result pairs for evaluating search quality. Fill in after transcription is complete.",
+  "description": "Labeled query-result pairs for evaluating hybrid search quality across 4 audio files. Covers keyword-heavy, semantic-heavy, and mixed queries.",
   "queries": [
     {
-      "query": "EXAMPLE: replace with a real query after transcribing your audio files",
+      "query": "Roman Republic founded after kings overthrown",
       "expected_results": [
         {
-          "file": "episode_01.wav",
-          "speaker": "Speaker A",
-          "timestamp_range": [0.0, 30.0],
-          "relevant_text": "Replace with the actual text you expect to match"
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [98.0, 315.0],
+          "relevant_text": "509 BC kings overthrown Roman Republic born"
+        }
+      ]
+    },
+    {
+      "query": "Augustus Caesar imperial monarchy",
+      "expected_results": [
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [0.0, 41.0],
+          "relevant_text": "Augustus Caesar rise from civil wars created an imperial monarchy around 27 BC"
+        }
+      ]
+    },
+    {
+      "query": "what caused the fall of Constantinople",
+      "expected_results": [
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [315.0, 420.0],
+          "relevant_text": "Fourth Crusade 1204 armies from mostly France sack Constantinople and dismember the empire"
+        },
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [98.0, 315.0],
+          "relevant_text": "1453 Constantinople falls"
+        }
+      ]
+    },
+    {
+      "query": "Ship of Theseus metaphor for Roman identity",
+      "expected_results": [
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [517.0, 600.0],
+          "relevant_text": "Ship of Theseus by the end it has none of the original parts but it is still that ship because of the story"
+        }
+      ]
+    },
+    {
+      "query": "AI whistleblower suspicious death",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [0.0, 170.0],
+          "relevant_text": "a whistleblower for an enormous AI company that is worth billions of dollars might get whacked"
+        }
+      ]
+    },
+    {
+      "query": "Sam Altman accused of murder",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [0.0, 170.0],
+          "relevant_text": "Sam Altman reaction to being accused of murder is bizarre"
+        }
+      ]
+    },
+    {
+      "query": "Epstein did not kill himself guards cameras",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [195.0, 300.0],
+          "relevant_text": "guards were asleep cameras were not working cellmate was a giant steroid bodybuilder"
+        }
+      ]
+    },
+    {
+      "query": "interstellar object made of nickel",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [325.0, 415.0],
+          "relevant_text": "3I Atlas the third interstellar object detected composed almost entirely of nickel"
+        }
+      ]
+    },
+    {
+      "query": "simulation theory reality accelerating",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [300.0, 325.0],
+          "relevant_text": "reality is accelerating the simulation is more and more undeniable"
+        }
+      ]
+    },
+    {
+      "query": "asteroid impact extinction event",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [518.0, 580.0],
+          "relevant_text": "five major extinction events Permian extinction almost all life eliminated Jurassic extinction caused by an asteroid"
+        }
+      ]
+    },
+    {
+      "query": "how to read non-verbal signals from people",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [54.0, 133.0],
+          "relevant_text": "animal part of our nature reading non-verbal physical signals stop your own thoughts absorb the other person energy"
+        }
+      ]
+    },
+    {
+      "query": "silencing inner chatter for success",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [54.0, 141.0],
+          "relevant_text": "silencing inner chatter the most important skill for success in life for seduction or for any kind of power"
+        }
+      ]
+    },
+    {
+      "query": "lack of defensiveness is seductive",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [226.0, 409.0],
+          "relevant_text": "the lack of defensiveness in a person is incredibly seductive"
+        }
+      ]
+    },
+    {
+      "query": "Errol Flynn seduction charm",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [226.0, 409.0],
+          "relevant_text": "Errol Flynn a woman described being around Flynn as like having drunk three martinis"
+        }
+      ]
+    },
+    {
+      "query": "mixed signals to make people think about you",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [434.0, 555.0],
+          "relevant_text": "Art of Seduction chapter called Mix Signals appear strong masculine but reveal a contrasting side creates mystery"
+        }
+      ]
+    },
+    {
+      "query": "should I go into consulting or industry",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [140.0, 220.0],
+          "relevant_text": "Don't go consulting because you don't learn anything go to the industry"
+        }
+      ]
+    },
+    {
+      "query": "how to overcome low self-esteem at work",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [220.0, 303.0],
+          "relevant_text": "ants and butterflies the only way to become a butterfly is to stop being an ant"
+        }
+      ]
+    },
+    {
+      "query": "Employee First Customer Second HCL revenue growth",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [420.0, 536.0],
+          "relevant_text": "Employee First Customer Second grew HCL from 700 million to 5 billion revenue in seven years"
+        }
+      ]
+    },
+    {
+      "query": "condolence cards sales strategy market share",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [220.0, 303.0],
+          "relevant_text": "bought condolence cards had team sign them went from less than 1 percent to 50 percent market share in 18 months"
+        }
+      ]
+    },
+    {
+      "query": "IT salary disparity CEO compensation",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [536.0, 599.0],
+          "relevant_text": "IT entry level salaries 4-5 lakhs have not increased inflation adjusted in 20 years while CEO salaries at companies like HCL have gone to hundreds of crores"
         }
       ]
     }
