@@ -21,7 +21,7 @@ venv/
 Thumbs.db
 
 # Data (transcripts are generated; keep audio for reproducibility)
-data/transcripts/
+# data/transcripts/
 
 # Models (downloaded on first run)
 models/
