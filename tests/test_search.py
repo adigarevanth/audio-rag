@@ -133,7 +133,7 @@ def _evaluate_search_fn(search_fn, queries, conn, k_values=(5, 10)):
     for q in queries:
         results = search_fn(conn, q["query"], k=max(k_values))
 
-        row = {"query": q["query"]}
+        row = {"query": q["query"], "category": q.get("category", "unknown")}
         for k in k_values:
             r_at_k = recall_at_k(results, q["expected_results"], k)
             p_at_k = precision_at_k(results, q["expected_results"], k)
@@ -209,6 +209,50 @@ class TestHybridSearch:
 
 # --- CLI evaluation runner ---
 
+def _per_category_metrics(per_query: list[dict]) -> dict[str, dict]:
+    """Compute aggregate metrics grouped by query category."""
+    from collections import defaultdict
+    by_cat: dict[str, list[dict]] = defaultdict(list)
+    for row in per_query:
+        by_cat[row["category"]].append(row)
+
+    result = {}
+    for cat, rows in sorted(by_cat.items()):
+        metrics: dict[str, list[float]] = defaultdict(list)
+        for row in rows:
+            for key in row:
+                if key.startswith("recall@") or key.startswith("precision@") or key == "mrr":
+                    if isinstance(row[key], (int, float)):
+                        metrics[key].append(row[key])
+        result[cat] = {
+            name: sum(vals) / len(vals) for name, vals in metrics.items()
+        }
+        result[cat]["count"] = len(rows)
+    return result
+
+
+def _write_per_strategy_rows(writer, label: str, headers: list[str], per_query: list[dict]) -> None:
+    """Write per-query rows for one search strategy."""
+    writer.writerow([label])
+    writer.writerow(headers)
+    for row in per_query:
+        writer.writerow([
+            row["query"],
+            row["category"],
+            f"{row.get('recall@5', ''):.3f}" if isinstance(row.get("recall@5"), float) else "",
+            f"{row.get('recall@10', ''):.3f}" if isinstance(row.get("recall@10"), float) else "",
+            f"{row.get('precision@5', ''):.3f}" if isinstance(row.get("precision@5"), float) else "",
+            f"{row.get('precision@10', ''):.3f}" if isinstance(row.get("precision@10"), float) else "",
+            f"{row['mrr']:.3f}",
+            row["top_result_file"],
+            row["top_result_speaker"],
+            row["top_result_timestamp"],
+            row["top_result_match_type"],
+            row["top_result_text"],
+        ])
+    writer.writerow([])
+
+
 def _write_csv(
     hybrid_per_query: list[dict],
     kw_per_query: list[dict],
@@ -221,77 +265,24 @@ def _write_csv(
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     csv_path = EVAL_DIR / f"eval_results_{timestamp}.csv"
 
+    headers = [
+        "Query", "Category", "Recall@5", "Recall@10", "Precision@5", "Precision@10",
+        "MRR", "Top Result File", "Top Result Speaker",
+        "Top Result Timestamp", "Match Type", "Top Result Text",
+    ]
+
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
 
         # --- Per-query results ---
         writer.writerow(["PER-QUERY RESULTS"])
         writer.writerow([])
+        _write_per_strategy_rows(writer, "HYBRID SEARCH", headers, hybrid_per_query)
+        _write_per_strategy_rows(writer, "KEYWORD ONLY SEARCH", headers, kw_per_query)
+        _write_per_strategy_rows(writer, "SEMANTIC ONLY SEARCH", headers, sem_per_query)
 
-        # Hybrid per-query
-        writer.writerow(["HYBRID SEARCH"])
-        headers = [
-            "Query", "Recall@5", "Recall@10", "Precision@5", "Precision@10",
-            "MRR", "Top Result File", "Top Result Speaker",
-            "Top Result Timestamp", "Match Type", "Top Result Text",
-        ]
-        writer.writerow(headers)
-        for row in hybrid_per_query:
-            writer.writerow([
-                row["query"],
-                f"{row.get('recall@5', ''):.3f}" if isinstance(row.get("recall@5"), float) else "",
-                f"{row.get('recall@10', ''):.3f}" if isinstance(row.get("recall@10"), float) else "",
-                f"{row.get('precision@5', ''):.3f}" if isinstance(row.get("precision@5"), float) else "",
-                f"{row.get('precision@10', ''):.3f}" if isinstance(row.get("precision@10"), float) else "",
-                f"{row['mrr']:.3f}",
-                row["top_result_file"],
-                row["top_result_speaker"],
-                row["top_result_timestamp"],
-                row["top_result_match_type"],
-                row["top_result_text"],
-            ])
-        writer.writerow([])
-
-        # Keyword per-query
-        writer.writerow(["KEYWORD ONLY SEARCH"])
-        writer.writerow(headers)
-        for row in kw_per_query:
-            writer.writerow([
-                row["query"],
-                f"{row.get('recall@5', ''):.3f}" if isinstance(row.get("recall@5"), float) else "",
-                f"{row.get('recall@10', ''):.3f}" if isinstance(row.get("recall@10"), float) else "",
-                f"{row.get('precision@5', ''):.3f}" if isinstance(row.get("precision@5"), float) else "",
-                f"{row.get('precision@10', ''):.3f}" if isinstance(row.get("precision@10"), float) else "",
-                f"{row['mrr']:.3f}",
-                row["top_result_file"],
-                row["top_result_speaker"],
-                row["top_result_timestamp"],
-                row["top_result_match_type"],
-                row["top_result_text"],
-            ])
-        writer.writerow([])
-
-        # Semantic per-query
-        writer.writerow(["SEMANTIC ONLY SEARCH"])
-        writer.writerow(headers)
-        for row in sem_per_query:
-            writer.writerow([
-                row["query"],
-                f"{row.get('recall@5', ''):.3f}" if isinstance(row.get("recall@5"), float) else "",
-                f"{row.get('recall@10', ''):.3f}" if isinstance(row.get("recall@10"), float) else "",
-                f"{row.get('precision@5', ''):.3f}" if isinstance(row.get("precision@5"), float) else "",
-                f"{row.get('precision@10', ''):.3f}" if isinstance(row.get("precision@10"), float) else "",
-                f"{row['mrr']:.3f}",
-                row["top_result_file"],
-                row["top_result_speaker"],
-                row["top_result_timestamp"],
-                row["top_result_match_type"],
-                row["top_result_text"],
-            ])
-        writer.writerow([])
-
-        # --- Summary ---
-        writer.writerow(["AGGREGATE METRICS"])
+        # --- Overall aggregate ---
+        writer.writerow(["AGGREGATE METRICS (ALL QUERIES)"])
         writer.writerow(["Strategy", "Recall@5", "Recall@10", "Precision@5", "Precision@10", "MRR"])
         for name, metrics in [("Hybrid", hybrid_metrics), ("Keyword Only", kw_metrics), ("Semantic Only", sem_metrics)]:
             writer.writerow([
@@ -302,6 +293,24 @@ def _write_csv(
                 f"{metrics.get('precision@10', ''):.3f}" if isinstance(metrics.get("precision@10"), float) else "",
                 f"{metrics['mrr']:.3f}",
             ])
+        writer.writerow([])
+
+        # --- Per-category breakdown ---
+        writer.writerow(["METRICS BY QUERY CATEGORY"])
+        writer.writerow(["Strategy", "Category", "Count", "Recall@5", "Recall@10", "Precision@5", "Precision@10", "MRR"])
+        for strat_name, pq in [("Hybrid", hybrid_per_query), ("Keyword Only", kw_per_query), ("Semantic Only", sem_per_query)]:
+            cat_metrics = _per_category_metrics(pq)
+            for cat, m in cat_metrics.items():
+                writer.writerow([
+                    strat_name,
+                    cat,
+                    m["count"],
+                    f"{m.get('recall@5', ''):.3f}" if isinstance(m.get("recall@5"), float) else "",
+                    f"{m.get('recall@10', ''):.3f}" if isinstance(m.get("recall@10"), float) else "",
+                    f"{m.get('precision@5', ''):.3f}" if isinstance(m.get("precision@5"), float) else "",
+                    f"{m.get('precision@10', ''):.3f}" if isinstance(m.get("precision@10"), float) else "",
+                    f"{m['mrr']:.3f}",
+                ])
 
     return str(csv_path)
 
@@ -338,6 +347,16 @@ def run_evaluation() -> None:
         click.echo("  ✓ Hybrid beats or ties individual strategies")
     else:
         click.echo("  ✗ Hybrid underperforms individual strategies")
+
+    # Per-category breakdown
+    click.echo("\n--- By Query Category ---")
+    for strat_name, pq in [("Hybrid", hybrid_pq), ("Keyword Only", kw_pq), ("Semantic Only", sem_pq)]:
+        cat_metrics = _per_category_metrics(pq)
+        click.echo(f"\n  {strat_name}:")
+        for cat, m in cat_metrics.items():
+            r10 = m.get("recall@10", 0)
+            mrr = m.get("mrr", 0)
+            click.echo(f"    {cat:10s} ({m['count']:2d} queries)  recall@10={r10:.3f}  mrr={mrr:.3f}")
 
     # Write CSV
     csv_path = _write_csv(hybrid_pq, kw_pq, sem_pq, hybrid_metrics, kw_metrics, sem_metrics)

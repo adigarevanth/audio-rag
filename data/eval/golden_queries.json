@@ -1,8 +1,9 @@
 {
-  "description": "Labeled query-result pairs for evaluating hybrid search quality across 5 audio files. Covers keyword-heavy, semantic-heavy, and mixed queries.",
+  "description": "Labeled query-result pairs for evaluating hybrid search quality across 5 audio files. Each query is tagged with its intended search category: keyword (exact word match), semantic (meaning-based, different words), or hybrid (benefits from both).",
   "queries": [
     {
       "query": "Roman Republic founded after kings overthrown",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "lex-fridman-498.wav",
@@ -14,6 +15,7 @@
     },
     {
       "query": "Augustus Caesar imperial monarchy",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "lex-fridman-498.wav",
@@ -25,6 +27,7 @@
     },
     {
       "query": "what caused the fall of Constantinople",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "lex-fridman-498.wav",
@@ -42,6 +45,7 @@
     },
     {
       "query": "Ship of Theseus metaphor for Roman identity",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "lex-fridman-498.wav",
@@ -52,7 +56,44 @@
       ]
     },
     {
+      "query": "how did Rome lose territory over the centuries",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [315.0, 420.0],
+          "relevant_text": "Arab conquests in the 630s Seljuk Turk conquest of Asia Minor Fourth Crusade 1204"
+        },
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [98.0, 315.0],
+          "relevant_text": "410 AD Visigoths sack Rome 476 AD last Western emperor deposed"
+        }
+      ]
+    },
+    {
+      "query": "Diocletian Constantine reforms late Roman empire",
+      "category": "keyword",
+      "expected_results": [
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [42.0, 98.0],
+          "relevant_text": "Diocletian and Constantine reforms tax system and bureaucracy late Roman empire"
+        },
+        {
+          "file": "lex-fridman-498.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [98.0, 315.0],
+          "relevant_text": "284 AD Diocletian rebuilds the state 312 AD Constantine defeats Maxentius at Milvian Bridge"
+        }
+      ]
+    },
+    {
       "query": "AI whistleblower suspicious death",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
@@ -64,6 +105,7 @@
     },
     {
       "query": "Sam Altman accused of murder",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
@@ -75,17 +117,25 @@
     },
     {
       "query": "Epstein did not kill himself guards cameras",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
           "speaker": "SPEAKER_00",
           "timestamp_range": [195.0, 300.0],
           "relevant_text": "guards were asleep cameras were not working cellmate was a giant steroid bodybuilder"
+        },
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [195.0, 300.0],
+          "relevant_text": "I don't think he killed himself nobody does"
         }
       ]
     },
     {
       "query": "interstellar object made of nickel",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
@@ -96,7 +146,8 @@
       ]
     },
     {
-      "query": "simulation theory reality accelerating",
+      "query": "are we living in a computer simulation",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
@@ -108,6 +159,7 @@
     },
     {
       "query": "asteroid impact extinction event",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "joe-rogan-2404.wav",
@@ -118,7 +170,38 @@
       ]
     },
     {
+      "query": "what would happen if a giant space rock hit Earth",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [518.0, 580.0],
+          "relevant_text": "the size of Manhattan and all nickel would probably kill most of human life"
+        },
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [325.0, 415.0],
+          "relevant_text": "non-gravitational acceleration something other than gravity is affecting its trajectory"
+        }
+      ]
+    },
+    {
+      "query": "Bill Gates climate change not a big deal",
+      "category": "keyword",
+      "expected_results": [
+        {
+          "file": "joe-rogan-2404.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [284.0, 300.0],
+          "relevant_text": "Bill Gates now saying climate change is not a big deal relax everybody"
+        }
+      ]
+    },
+    {
       "query": "how to read non-verbal signals from people",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "raj-shamani-F0565.wav",
@@ -130,6 +213,7 @@
     },
     {
       "query": "silencing inner chatter for success",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "raj-shamani-F0565.wav",
@@ -140,7 +224,26 @@
       ]
     },
     {
+      "query": "how to be more attractive and charismatic",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [226.0, 409.0],
+          "relevant_text": "the lack of defensiveness in a person is incredibly seductive"
+        },
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [434.0, 555.0],
+          "relevant_text": "Mix Signals appear strong masculine but reveal a contrasting side creates mystery"
+        }
+      ]
+    },
+    {
       "query": "lack of defensiveness is seductive",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "raj-shamani-F0565.wav",
@@ -152,6 +255,7 @@
     },
     {
       "query": "Errol Flynn seduction charm",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "raj-shamani-F0565.wav",
@@ -163,6 +267,7 @@
     },
     {
       "query": "mixed signals to make people think about you",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "raj-shamani-F0565.wav",
@@ -173,7 +278,20 @@
       ]
     },
     {
+      "query": "practicing empathy with strangers daily exercise",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "raj-shamani-F0565.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [141.0, 220.0],
+          "relevant_text": "practicing on everyday strangers supermarket counter worker imagine their apartment family childhood"
+        }
+      ]
+    },
+    {
       "query": "should I go into consulting or industry",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "finance-with-sharan-career-choices.wav",
@@ -185,6 +303,7 @@
     },
     {
       "query": "how to overcome low self-esteem at work",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "finance-with-sharan-career-choices.wav",
@@ -196,6 +315,7 @@
     },
     {
       "query": "Employee First Customer Second HCL revenue growth",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "finance-with-sharan-career-choices.wav",
@@ -207,6 +327,7 @@
     },
     {
       "query": "condolence cards sales strategy market share",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "finance-with-sharan-career-choices.wav",
@@ -218,6 +339,7 @@
     },
     {
       "query": "IT salary disparity CEO compensation",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "finance-with-sharan-career-choices.wav",
@@ -228,7 +350,26 @@
       ]
     },
     {
+      "query": "what career advice would you give to someone starting out in 2026",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "finance-with-sharan-career-choices.wav",
+          "speaker": "SPEAKER_01",
+          "timestamp_range": [18.0, 140.0],
+          "relevant_text": "lower your expectations we are entering a mother of all stops learn meta-skills curiosity experimentation"
+        },
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [0.0, 31.0],
+          "relevant_text": "let AI do what it can then gain your skills to do the other 60 70 percent AI cannot do"
+        }
+      ]
+    },
+    {
       "query": "universities too slow to adapt curriculum for AI",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -240,6 +381,7 @@
     },
     {
       "query": "how to learn AI skills online courses",
+      "category": "semantic",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -251,6 +393,7 @@
     },
     {
       "query": "AI native interns college students productive",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -262,6 +405,7 @@
     },
     {
       "query": "humans have context advantage over AI",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -272,7 +416,26 @@
       ]
     },
     {
+      "query": "will AI replace all jobs and cause unemployment",
+      "category": "semantic",
+      "expected_results": [
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [422.0, 522.0],
+          "relevant_text": "rejects the job apocalypse narrative humans have a long-term context advantage"
+        },
+        {
+          "file": "andrew_ng_ai_opportunities.wav",
+          "speaker": "SPEAKER_00",
+          "timestamp_range": [0.0, 31.0],
+          "relevant_text": "let AI do what it can then gain your skills to do the other 60 70 percent AI cannot do"
+        }
+      ]
+    },
+    {
       "query": "AI models terrible for learning student retention",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -284,6 +447,7 @@
     },
     {
       "query": "measuring AI productivity KPIs business outcomes",
+      "category": "hybrid",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -295,6 +459,7 @@
     },
     {
       "query": "prompt engineering chain of thought few-shot examples",
+      "category": "keyword",
       "expected_results": [
         {
           "file": "andrew_ng_ai_opportunities.wav",
@@ -306,4 +471,3 @@
     }
   ]
 }
-
